@@ -2,7 +2,7 @@ PVector mouse;   //declare a P
 int num = 100; //#raindrops
 int score = 0; //number of raindrops touched
 Raindrop[] r = new Raindrop[num];
-ArrayList drops = new ArrayList();
+ArrayList<Raindrop> drops = new ArrayList<Raindrop>();
 
 Catcher catcher = new Catcher(200);
 
@@ -25,7 +25,13 @@ void setup() {
 void draw() {
   background(200, 200, 255);
   catcher.display();
-  for (int j=0; j<num; j++) {
+  drops.add(new Raindrop(random(width),0));
+  
+  for(int j = drops.size()-1; j>=0; j--) {
+
+  }
+  
+  /*for (int j=0; j<num; j++) {
     r[j].fall();         //make the raindrop fall. It should accelerate as if pulled towards the ground by earth's gravity
     r[j].display();      //display the raindrop
     if (r[j].touches(catcher)) {      //check to see if the raindrop is in contact with the point represented by the PVector called mouse
@@ -36,6 +42,7 @@ void draw() {
        r[j].reset();                           //if it does, reset the raindrop
     }
   }
+  */
   catcher.update();
   text(score,width/2,40);
 }
