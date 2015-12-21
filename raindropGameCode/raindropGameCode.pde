@@ -2,6 +2,7 @@ PVector mouse;   //declare a P
 int num = 100; //#raindrops
 int score = 0; //number of raindrops touched
 Raindrop[] r = new Raindrop[num];
+ArrayList drops = new ArrayList();
 
 // On your own, create an array of Raindrop objects instead of just one
 // Use the array instead of the single object

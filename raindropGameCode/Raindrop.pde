@@ -40,4 +40,8 @@ class Raindrop {
   boolean touches(PVector a) {
     return a.dist(pos)<=diam/2;
   }
+  
+  boolean touches(Catcher a) {
+    return a.pos.dist(pos)<=diam/2+a.diam/2;
+  }
 }
