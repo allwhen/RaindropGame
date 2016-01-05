@@ -9,7 +9,7 @@ class Raindrop {
     pos.set(random(width), random(height));
     vel.set(0, 0);
     acc.set(0, .2);
-    diam = 30;
+    diam = random(20,45);
   }
 
   //initializes at a point
@@ -17,7 +17,7 @@ class Raindrop {
     pos.set(x, y);
     vel.set(0, 0);
     acc.set(0, .2);
-    diam = 30;
+    diam = random(20,45);
   }
   
   //moves raindrop, accelerates
