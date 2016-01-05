@@ -32,16 +32,18 @@ class Raindrop {
     ellipse(pos.x, pos.y, diam, diam);
   }
   
-  //moves raindrop back to the top
+  //moves raindrop back to the top (not used)
   void reset() {
     vel.y = 0;
     pos.set(random(width),0);
   }
   
+  //returns whether or not the raindrop touches some point
   boolean touches(PVector a) {
     return a.dist(pos)<=diam/2;
   }
   
+  //returns whether or not raindrop touches a catcher
   boolean touches(Catcher a) {
     return a.pos.dist(pos)<=diam/2+a.diam/2;
   }
